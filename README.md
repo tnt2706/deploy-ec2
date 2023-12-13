@@ -35,6 +35,7 @@ npm run dev
   ```
 
   ```bash
+  # Run server in folder below
   cd _work/{{folder_name_project}}/{{folder_name_project}}
   ```
 
