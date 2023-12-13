@@ -26,16 +26,17 @@ npm run dev
 
   ![image](./images/svc.png)
 
+  > <b>Link install nodejs </b>
+  > https://github.com/nodesource/distributions
+
   ```bash
   sudo apt-get install nodejs -y
   sudo npm install pm2@latest -g
   ```
 
-
   ```bash
   cd _work/{{folder_name_project}}/{{folder_name_project}}
   ```
-
 
 ### 3. Create file yaml to on event to git local
 
@@ -43,5 +44,6 @@ npm run dev
   // Create name to server in ec2
   pm2 start server.js --name=shopdev-backend
 
-  // Add new line im folder `
+  // Add new line im folder .github/workflows/node.js.yaml
+  pm2 restart shopdev-backend
   ```
