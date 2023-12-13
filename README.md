@@ -46,4 +46,10 @@ npm run dev
 
   // Add new line im folder .github/workflows/node.js.yaml
   pm2 restart shopdev-backend
+
+  // Modify file .yaml
+   runs-on: self-hosted
+
+   // Open port 3000 in ec2
+
   ```
