@@ -29,7 +29,7 @@ router.get('/api/users', (req, res, next) => {
         age: 39,
       },
       {
-        name: 'Messi',
+        name: 'Messii',
         age: 37,
       },
     ],
