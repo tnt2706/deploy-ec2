@@ -27,6 +27,12 @@ npm run dev
 
   ![image](./images/svc.png)
 
+  ```sh
+  sudo ./svc.sh install
+  # When reboot only cmd below
+  sudo ./svc.sh start
+  ```
+
   - **Install**
     <br>
 
