@@ -21,7 +21,7 @@ router.get('/api/users', (req, res, next) => {
     message: 'api ok',
     metadata: [
       {
-        name: 'tinhtran',
+        name: 'tinhtranss',
         age: 40,
       },
       {
