@@ -65,7 +65,7 @@ npm run dev
 
   ```
 
----
+  <br>
 
 ## Configuration NGINX
 
