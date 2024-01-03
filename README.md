@@ -1,7 +1,5 @@
 # Deploy EC2
 
-nodejs + express + mongodb to do MVC example
-
 ## How to use
 
 ### clone git
