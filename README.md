@@ -69,6 +69,12 @@ npm run dev
 
 ## Configuration NGINX
 
+> All run cmd in direct : `/etc/nginx/sites-available`
+
+```bash
+cd /etc/nginx/sites-available
+```
+
 ### 1. Install NGINX sing Reverse Proxy
 
 ```bash
