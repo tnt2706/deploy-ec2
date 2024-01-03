@@ -110,14 +110,15 @@ location /api {
   sudo add-apt-repository ppa:certbot/certbot
   sudo apt-get update
   sudo apt-get install python3-certbot-nginx
+  # Example : sudo certbot --nginx -d shopdev.anonystick.com
   sudo certbot --nginx -d {{DOMAIN_NAME}}
 ```
 
-*Example add ssl to domain `shopdev.anonystick.com`*
+### 4. Auto register extend validity Period
 
-  ```js
-  sudo add-apt-repository ppa:certbot/certbot
-  sudo apt-get update
-  sudo apt-get install python3-certbot-nginx
-  sudo certbot --nginx -d shopdev.anonystick.com
-  ```
+```bash
+sudo certbot renew --dry-run
+
+# Check status certbot time
+sudo systemctl status certbot.time
+```
