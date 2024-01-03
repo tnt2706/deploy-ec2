@@ -22,20 +22,29 @@ npm run dev
 
 ### 2. Install, start svc.sh and install node, pm2 in server ec2
 
+ - **Run runner github with status `ide` in runner github**
+  <br>
+
   ![image](./images/svc.png)
 
-  > <b>Link install nodejs </b>
-  > https://github.com/nodesource/distributions
+  - **Install**
+    <br>
 
-  ```bash
-  sudo apt-get install nodejs -y
-  sudo npm install pm2@latest -g
-  ```
+    > <b>Link install nodejs </b>
+    > https://github.com/nodesource/distributions
 
-  ```bash
-  # Run server in folder below
-  cd _work/{{folder_name_project}}/{{folder_name_project}}
-  ```
+    ```bash
+    sudo apt-get install nodejs -y
+    sudo npm install pm2@latest -g
+    ```
+
+    ```bash
+    # Run server in folder below with folder `actions-runner`
+    cd _work/{{folder_name_project}}/{{folder_name_project}}
+
+    # With example
+    cd _work/deploy-ec2/deploy-ec2
+    ```
 
 ### 3. Create file yaml to on event to git local
 
