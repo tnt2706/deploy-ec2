@@ -13,11 +13,11 @@ npm run dev
 
 ## How to config Git action using `Runner`
 
-### 1.Config runner
+### 1. Config runner
 
   ![image](./images/config-runner.png)
 
-### 2.Install, start svc.sh and install node, pm2 in server ec2
+### 2. Install, start svc.sh and install node, pm2 in server ec2
 
  - **Run runner github with status `ide` in runner github**
   <br>
@@ -49,7 +49,7 @@ npm run dev
     cd _work/deploy-ec2/deploy-ec2
     ```
 
-### 3.Create file yaml to on event to git local
+### 3. Create file yaml to on event to git local
 
   ```js
   // Create name to server in ec2
@@ -69,7 +69,7 @@ npm run dev
 
 ## Configuration NGINX
 
-### Install NGINX sing Reverse Proxy
+### 1. Install NGINX sing Reverse Proxy
 
 ```bash
 # In `actions-runner`
@@ -90,7 +90,7 @@ location /api {
 sudo systemctl restart nginx
 ```
 
-### Add domain to nginx configuration
+### 2. Add domain to nginx configuration
 
 ```bash
 server_name shopdev.tinhtran.com www.shopdev.tinhtran.com
@@ -104,7 +104,7 @@ location /api {
 
 ```
 
-### Add SSL to domain
+### 3. Add SSL to domain
 
 ```bash
   sudo add-apt-repository ppa:certbot/certbot
