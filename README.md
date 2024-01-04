@@ -75,7 +75,7 @@ npm run dev
 cd /etc/nginx/sites-available
 ```
 
-### 1. Install NGINX sing Reverse Proxy
+### 1. Install NGINX Reverse Proxy
 
 ```bash
 # In `actions-runner`
@@ -86,7 +86,7 @@ cd /etc/nginx/sites-available
 sudo vim default
 
 location /api {
-  rewrite ^\/api\/(.*)$ /api /$1 break;
+  rewrite ^\/api\/(.*)$ /api/$1 break;
   proxy_pass http://localhost:3000;
   proxy_set_header Host $host;
   proxy_set_header X-Real-IP $remote_addr;
@@ -96,19 +96,25 @@ location /api {
 sudo systemctl restart nginx
 ```
 
+![image](./images/reverse-proxy.png)
+
 ### 2. Add domain to nginx configuration
+
+- Remove config `Reverse Proxy`
 
 ```bash
 server_name shopdev.tinhtran.com www.shopdev.tinhtran.com
-location /api {
-  rewrite ^\/api\/(.*)$ /api /$1 break;
+location / {
   proxy_pass http://localhost:3000;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection 'upgrade';
   proxy_set_header Host $host;
-  proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_cache_bypass  $http_upgrade
 }
-
 ```
+
+![image](./images/domainToNginx.png)
 
 ### 3. Add SSL to domain
 
